@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js sidebar-large" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<!--<![endif]-->
+
+  <head>
+    <!-- BEGIN META SECTION -->
+    <meta charset="utf-8" />
+    <title>Power BIs - Gestão do Conhecimento</title>
+    <link rel="icon" type="image/x-icon" href="https://powerbi.gestaoconhecimento.com.br/assets/img/favicon/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:image" content="https://powerbi.gestaoconhecimento.com.br/assets/img/favicon/android-chrome-512x512.png" />
+    <meta
+      content="Pagina destinada a união dos Power BIs da Gestão do Conhecimento - Ferrosos"
+      name="description"
+    />
+    <meta content="GC" name="author" />
+    <!-- END META SECTION -->
+    <!-- BEGIN PAGE LEVEL STYLE -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+    <!-- END PAGE LEVEL STYLE -->
+    <script src="assets/js/icons.js"></script>
+  </head>
+
+  <body>
+    <!-- BEGIN VERTICAL NAVBAR -->
+    <div class="vertical-nav active" id="sidebar">
+      <div class="sideBarTop">
+        <div class="media d-flex align-items-center px-5 py-1">
+          <a href="/"
+            ><img src="./assets/img/gc.png" class="gc-logo img-fluid"
+          /></a>
+        </div>
+        <div class="gradient align-center"></div>
+      </div>
+
+      <ul class="list-group sidebarList withScroll" id="side-menu"></ul>
+      <button
+        id="sidebarClose"
+        type="button"
+        class="btn rounded-pill shadow-sm bi-active"
+      >
+        <i class="fa fa-chevron-right" id="side-c-1"></i>
+        <i class="fa fa-chevron-left bi-active" id="side-c-2"></i>
+      </button>
+    </div>
+    <!-- END VERTICAL NAVBAR -->
+
+    <!-- BEGIN MAIN CONTENT -->
+    <div class="page-content active" id="content">
+      <!-- Toggle button -->
+      <div class="container-fluid content g-0 p-0 m-0">
+        <div class="load bi-active" id="bi-loading">
+          <div class="blink"></div>
+        </div>
+        <script>
+          function onMyFrameLoad() {
+            setTimeout(function () {
+              $("#bi-loading").addClass("bi-active");
+            }, 5000);
+          }
+        </script>
+        <iframe
+          src=""
+          height="100%"
+          width="100%"
+          frameborder="0"
+          class="bi-active"
+          id="bi-iframe"
+          onload="onMyFrameLoad()"
+        >
+        </iframe>
+        <div class="row h-100" id="content-nav">
+          <div class="col"></div>
+          <div class="col d-flex h-100 flex-row-reverse">
+            <ul
+              class="list-group withScroll principalMenu align-self-center"
+              id="principal-menu"
+            ></ul>
+          </div>
+          <div class="col-lg-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- END MAIN CONTENT -->
+
+    <!-- BEGIN SCRIPTS -->
+    <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/main.js" type="module"></script>
+    <!-- END SCRIPTS -->
+  </body>
+</html>
